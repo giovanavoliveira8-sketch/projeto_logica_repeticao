@@ -1,9 +1,7 @@
-//ESTRUTURA DE REPETIÇÃO FOR
-const divfor = document.querySelector('#div-for')
+const divFor = document.querySelector('#div-for')
 
-for(i = 0;i < 10; i++){
-    console.log(i, 'Amor')
-    divfor.innerHTML += `${i} - Amor <br>`
+for( i = 0; i < 10; i++){
+    divFor.innerHTML += `${i} - Amor <br>`
 }
 
 //CONTADOR/ACUMULADOR
@@ -14,32 +12,28 @@ const divContAcum = document.querySelector('#div-cont-acum')
 let cont = 0
 let acum = 0.0
 
-btnNum.addEventListener('click' , (evt)=>{
+btnNum.addEventListener('click', (evt)=>{
     let numDigitado = Number(inputNum.value)
 
     cont++
     acum += numDigitado
 
-    divContAcum.innerHTML = `TOTAL DE NÚMERO DIGITADO É: ${cont} <br> A SOMA DOS NÚMEROS É: ${acum}`
+    divContAcum.innerHTML = `TOTAL DE NÚMERO DIGITADO É: ${cont} <br> A SOMA DOS NÚMERO É: ${acum}`
 
     inputNum.value = ''
 })
 
-
-
-//CONTROLANDO FOR
+//CONTROLADOR FOR
 const inputFrase = document.querySelector('#frase')
-const inputNumRepeticao = document.querySelector('#num-reticao')
+const inputNumRepeticao = document.querySelector('#num-repeticao')
 const btnFrase = document.querySelector('#btn-frase')
 const divFrase = document.querySelector('#div-frase')
 
-btnFrase.addEventListener('click', (evt) => {
-   let numRepeti = Number(inputNumRepeticao.value)
-   let frase = inputFrase.value  
+btnFrase.addEventListener('click', (evt)=>{
+    let numRepeti = Number(inputNumRepeticao.value)
+    let frase = inputFrase.value
 
-   for (i = 0; i < numRepeti; i++){
-    divFrase.innerHTML += `${i + 1} - ${frase} <br>`
-   }
+    for(i = 0; i < numRepeti; i++){
+        divFrase.innerHTML += `${i} - ${frase} <br>`
+    }
 })
-
-//FOR IN
