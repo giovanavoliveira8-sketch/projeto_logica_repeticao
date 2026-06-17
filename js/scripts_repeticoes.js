@@ -43,6 +43,15 @@ const presentes = ['Bicicleta', 'Celular', 'Camisa do Mengão', 'Doleira', 'Teni
 
 const divArray = document.querySelector('#div-array')
 
+divArray.innerHTML = presentes [0]
 
+for (i = 0;i < 5; i++){
+    divArray.innerHTML += `${presentes[i]} <br>`
+}
 
-//FOR INpt 
+//FOR IN
+const divForin = document.querySelector('#div-forin')
+
+for(let posicao in presentes){
+    divArray.innerHTML += 
+    }
