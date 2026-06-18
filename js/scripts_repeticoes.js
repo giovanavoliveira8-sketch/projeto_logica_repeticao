@@ -1,3 +1,4 @@
+c//ESTRUTURA DE REPETIÇAO
 const divFor = document.querySelector('#div-for')
 
 for( i = 0; i < 10; i++){
@@ -38,20 +39,44 @@ btnFrase.addEventListener('click', (evt)=>{
     }
 })
 
-//COLEÇÂO DE DADOS - ARRAY
-const presentes = ['Bicicleta', 'Celular', 'Camisa do Mengão', 'Doleira', 'Tenis Adidas']
+//COLEÇÃO DE DADOS - ARRAY
+const presentes = ['Bicicleta', 'celular', 'camisa do Mengão', 'Doleira', 'Tenis Adidas']
 
 const divArray = document.querySelector('#div-array')
 
-divArray.innerHTML = presentes [0]
-
-for (i = 0;i < 5; i++){
-    divArray.innerHTML += `${presentes[i]} <br>`
+for(i =0; i < 5;i++){
+    divArray.innerHTML +=  `${presentes[i]} <br>`
 }
 
 //FOR IN
-const divForin = document.querySelector('#div-forin')
+const divForIn = document.querySelector('#div-forin')
 
 for(let posicao in presentes){
-    divArray.innerHTML += 
-    }
+    divForIn.innerHTML += `${presentes[posicao]} <br>`
+}
+
+//FOR OF
+const divForOf = document.querySelector('#div-forof')
+
+for(let elemento of presentes){
+    divForOf.innerHTML += `${elemento} <br>`
+}
+
+//FOREACH
+const divForeach = document.querySelector('#div-foreach')
+
+presentes.forEach((elemento, i) => {
+    divForeach.innerHTML += `${i} - ${elemento} <br>`
+})
+
+//COLEÇÃO DE OBJETOS LITERAIS - ARRAY
+const pessoas = [
+    {nome: 'Maria Flor', idade: 25, renda: 8500},
+    {nome: 'Joerdson Souza', idade: 75, renda:5000},
+    {nome:'Taoca', idade:28, renda:500},
+    {nome:'Chicó', idade:36, renda:100},
+    {nome: 'João Flor', idade:32, renda:80}
+]
+
+//LISTANDO OBJETO LITERAL PELO FOR
+const divListaObjFor = document.querySelector('#div-listado-for')
